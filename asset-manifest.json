@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/sleepy-sloth/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/sleepy-sloth/static/js/main.75acfb92.chunk.js",
-    "main.js.map": "/sleepy-sloth/static/js/main.75acfb92.chunk.js.map",
-    "runtime-main.js": "/sleepy-sloth/static/js/runtime-main.3a6fc6fc.js",
-    "runtime-main.js.map": "/sleepy-sloth/static/js/runtime-main.3a6fc6fc.js.map",
-    "static/js/2.1fba0e31.chunk.js": "/sleepy-sloth/static/js/2.1fba0e31.chunk.js",
-    "static/js/2.1fba0e31.chunk.js.map": "/sleepy-sloth/static/js/2.1fba0e31.chunk.js.map",
-    "static/js/3.be26eff5.chunk.js": "/sleepy-sloth/static/js/3.be26eff5.chunk.js",
-    "static/js/3.be26eff5.chunk.js.map": "/sleepy-sloth/static/js/3.be26eff5.chunk.js.map",
-    "index.html": "/sleepy-sloth/index.html",
-    "service-worker.js": "/sleepy-sloth/service-worker.js",
-    "service-worker.js.map": "/sleepy-sloth/service-worker.js.map",
-    "static/css/main.6dea0f05.chunk.css.map": "/sleepy-sloth/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.1fba0e31.chunk.js.LICENSE.txt": "/sleepy-sloth/static/js/2.1fba0e31.chunk.js.LICENSE.txt"
+    "main.css": "/pranav-pwa/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/pranav-pwa/static/js/main.1b32a143.chunk.js",
+    "main.js.map": "/pranav-pwa/static/js/main.1b32a143.chunk.js.map",
+    "runtime-main.js": "/pranav-pwa/static/js/runtime-main.56e788ae.js",
+    "runtime-main.js.map": "/pranav-pwa/static/js/runtime-main.56e788ae.js.map",
+    "static/js/2.1fba0e31.chunk.js": "/pranav-pwa/static/js/2.1fba0e31.chunk.js",
+    "static/js/2.1fba0e31.chunk.js.map": "/pranav-pwa/static/js/2.1fba0e31.chunk.js.map",
+    "static/js/3.be26eff5.chunk.js": "/pranav-pwa/static/js/3.be26eff5.chunk.js",
+    "static/js/3.be26eff5.chunk.js.map": "/pranav-pwa/static/js/3.be26eff5.chunk.js.map",
+    "index.html": "/pranav-pwa/index.html",
+    "service-worker.js": "/pranav-pwa/service-worker.js",
+    "service-worker.js.map": "/pranav-pwa/service-worker.js.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/pranav-pwa/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.1fba0e31.chunk.js.LICENSE.txt": "/pranav-pwa/static/js/2.1fba0e31.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3a6fc6fc.js",
+    "static/js/runtime-main.56e788ae.js",
     "static/js/2.1fba0e31.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.75acfb92.chunk.js"
+    "static/js/main.1b32a143.chunk.js"
   ]
 }
