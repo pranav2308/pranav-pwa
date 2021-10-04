@@ -3,21 +3,68 @@ import { WrapperDiv, StyledHeader, StyledButton } from "./styles";
 import Grid from "@mui/material/Grid";
 
 function App() {
+  const [isAsleep, setIsAsleep] = React.useState(true);
+
+  React.useEffect(() => {
+    navigator.serviceWorker.addEventListener("message", ({ data }) => {
+      if (data !== undefined) {
+        setIsAsleep(data);
+      }
+    });
+  }, []);
+
+  const actions = isAsleep
+    ? [
+        {
+          action: "wake up",
+          title: "Wake up the sloth!",
+          icon: "images/favicon16.png",
+        },
+        {
+          action: "close",
+          title: "Close notification",
+          icon: "images/favicon16.png",
+        },
+      ]
+    : [
+        {
+          action: "put to sleep",
+          title: "Put sloth to sleep again!",
+          icon: "images/favicon16.png",
+        },
+        {
+          action: "close",
+          title: "Close notification",
+          icon: "images/favicon16.png",
+        },
+      ];
+
+  const body = isAsleep
+    ? "Do you really want to wake me up?"
+    : "Do you really want me to go to sleep again?";
+
   const sendNotification = () => {
     Notification.requestPermission().then((result) => {
-      console.log("in here outside!");
       navigator.serviceWorker.ready.then(function (registration) {
-        console.log("in here inside!");
         registration.showNotification("Sloth says:", {
-          body: "Do you really want to wake me up?",
+          body,
+          icon: "images/favicon16.png",
+          image: "../images/logo192.png",
+          actions,
           vibrate: [200, 100, 200, 100, 200, 100, 200],
           tag: "notification-sample",
         });
       });
     });
   };
-  const imgSrc =
-    "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/sloth-sleeping-john-benedict.jpg";
+
+  const imgSrc = isAsleep
+    ? "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/sloth-sleeping-john-benedict.jpg"
+    : "https://i.huffpost.com/gen/1742216/thumbs/o-SLOTH-facebook.jpg";
+
+  const buttonText = isAsleep
+    ? "Press this button to wake up the sloth!"
+    : "Press this button to put sloth to sleep again";
   return (
     <WrapperDiv>
       <Grid container direction="row" style={{ paddingTop: "100px" }}>
@@ -28,9 +75,7 @@ function App() {
           <img src={imgSrc} width="300px" height="200px"></img>
         </Grid>
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
-          <StyledButton onClick={sendNotification}>
-            Press this button to wake up the Sloth!
-          </StyledButton>
+          <StyledButton onClick={sendNotification}>{buttonText}</StyledButton>
         </Grid>
       </Grid>
     </WrapperDiv>
