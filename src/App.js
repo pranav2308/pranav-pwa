@@ -32,6 +32,17 @@ function App() {
     );
   };
 
+  let wisdomButton;
+  if ("Notification" in window) {
+    wisdomButton = (
+      <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
+        <StyledButton onClick={sendNonInteractiveNotification}>
+          Listen to sloth's wisdom!
+        </StyledButton>
+      </Grid>
+    );
+  }
+
   const actions = isAsleep
     ? [
         {
@@ -116,11 +127,7 @@ function App() {
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
           <img src={imgSrc} width="300px" height="200px"></img>
         </Grid>
-        <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
-          <StyledButton onClick={sendNonInteractiveNotification}>
-            Listen to sloth's wisdom!
-          </StyledButton>
-        </Grid>
+        {wisdomButton}
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
           <StyledButton onClick={sendNotification}>{buttonText}</StyledButton>
         </Grid>
