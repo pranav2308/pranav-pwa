@@ -84,6 +84,29 @@ function App() {
   const buttonText = isAsleep
     ? "Wake up the sloth!"
     : "Put sloth to sleep again";
+
+  const onShareButtonClick = () => {
+    try {
+      navigator.share({
+        url: window.location.href,
+        title: document.title,
+      });
+    } catch (e) {
+      console.error("Could not share! we got error: ", e);
+    }
+  };
+
+  let shareButton;
+  if (navigator.share) {
+    shareButton = (
+      <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
+        <StyledButton onClick={onShareButtonClick}>
+          Spread the sloth's wisdom with your friends!
+        </StyledButton>
+      </Grid>
+    );
+  }
+
   return (
     <WrapperDiv>
       <Grid container direction="row" style={{ paddingTop: "100px" }}>
@@ -101,6 +124,7 @@ function App() {
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
           <StyledButton onClick={sendNotification}>{buttonText}</StyledButton>
         </Grid>
+        {shareButton}
       </Grid>
     </WrapperDiv>
   );
