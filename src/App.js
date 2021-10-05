@@ -13,6 +13,25 @@ function App() {
     });
   }, []);
 
+  const wisdomArray = [
+    "Don't just do something, sit there!",
+    "Never postpone what you can cancel",
+    "Always take a pillow wherever you go!",
+    "You can never have enough sleep",
+    "Use the bathroom facing down",
+    "Never waste any time you can spend on sleeping",
+    "Always say, I'll do it tomorrow",
+    "Getting out of bed for work is something we should be bragging about all the time",
+    "There may be no excuse for laziness, but always keep looking for one",
+  ];
+
+  const sendNonInteractiveNotification = () => {
+    const wisdom = wisdomArray[Math.floor(Math.random() * wisdomArray.length)];
+    Notification.requestPermission().then(
+      () => new Notification(`Sloth says: ${wisdom}`)
+    );
+  };
+
   const actions = isAsleep
     ? [
         {
@@ -63,8 +82,8 @@ function App() {
     : "https://i.huffpost.com/gen/1742216/thumbs/o-SLOTH-facebook.jpg";
 
   const buttonText = isAsleep
-    ? "Press this button to wake up the sloth!"
-    : "Press this button to put sloth to sleep again";
+    ? "Wake up the sloth!"
+    : "Put sloth to sleep again";
   return (
     <WrapperDiv>
       <Grid container direction="row" style={{ paddingTop: "100px" }}>
@@ -73,6 +92,11 @@ function App() {
         </Grid>
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
           <img src={imgSrc} width="300px" height="200px"></img>
+        </Grid>
+        <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
+          <StyledButton onClick={sendNonInteractiveNotification}>
+            Listen to sloth's wisdom!
+          </StyledButton>
         </Grid>
         <Grid item xs={12} style={{ textAlign: "center", marginTop: "30px" }}>
           <StyledButton onClick={sendNotification}>{buttonText}</StyledButton>
