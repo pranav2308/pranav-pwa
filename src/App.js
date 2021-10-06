@@ -27,9 +27,15 @@ function App() {
 
   const sendNonInteractiveNotification = () => {
     const wisdom = wisdomArray[Math.floor(Math.random() * wisdomArray.length)];
-    Notification.requestPermission().then(
-      () => new Notification(`Sloth says: ${wisdom}`)
-    );
+    navigator.serviceWorker.ready.then(function (registration) {
+      registration.showNotification("Sloth says:", {
+        body: wisdom,
+        icon: "images/favicon16.png",
+        image: "../images/logo192.png",
+        vibrate: [200, 100, 200, 100, 200, 100, 200],
+        tag: "non-interactive-notification-sample",
+      });
+    });
   };
 
   let wisdomButton;
