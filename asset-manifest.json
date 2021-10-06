@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pranav-pwa/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/pranav-pwa/static/js/main.4581c6ea.chunk.js",
-    "main.js.map": "/pranav-pwa/static/js/main.4581c6ea.chunk.js.map",
+    "main.js": "/pranav-pwa/static/js/main.80f0eed8.chunk.js",
+    "main.js.map": "/pranav-pwa/static/js/main.80f0eed8.chunk.js.map",
     "runtime-main.js": "/pranav-pwa/static/js/runtime-main.56e788ae.js",
     "runtime-main.js.map": "/pranav-pwa/static/js/runtime-main.56e788ae.js.map",
     "static/js/2.1fba0e31.chunk.js": "/pranav-pwa/static/js/2.1fba0e31.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.56e788ae.js",
     "static/js/2.1fba0e31.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.4581c6ea.chunk.js"
+    "static/js/main.80f0eed8.chunk.js"
   ]
 }
